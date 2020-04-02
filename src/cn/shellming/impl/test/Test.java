@@ -1,7 +1,6 @@
 package cn.shellming.impl.test;
 
-import cn.shellming.impl.BubbleSort;
-import cn.shellming.impl.SelectionSort;
+import cn.shellming.impl.*;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -14,11 +13,16 @@ import java.util.Random;
  */
 public class Test {
     public static void main(String[] args) {
-
         BubbleSort sort = new BubbleSort();
-        System.err.println(Arrays.toString(sort.sort(Test.randomNumber(10000))));
+        System.err.println(Arrays.toString(sort.sort(Test.randomNumber(1000))));
         SelectionSort selectionSort = new SelectionSort();
-        System.err.println(Arrays.toString(selectionSort.sort(Test.randomNumber(10000))));
+        System.err.println(Arrays.toString(selectionSort.sort(Test.randomNumber(100000))));
+        InsertionSort insertionSort = new InsertionSort();
+        System.out.println(Arrays.toString(insertionSort.sort(Test.randomNumber(1000))));
+        InsertionSortII ii = new InsertionSortII();
+        System.out.println(Arrays.toString(ii.sort(Test.randomNumber(10))));
+        ShellSort shellSort = new ShellSort();
+        System.out.println(Arrays.toString(shellSort.sort(Test.randomNumber(10))));
     }
 
     public static int[] randomNumber(int n){
