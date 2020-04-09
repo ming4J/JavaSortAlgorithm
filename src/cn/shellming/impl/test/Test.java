@@ -21,11 +21,13 @@ public class Test {
 //        System.out.println(Arrays.toString(insertionSort.sort(Test.randomNumber(1000))));
 //        InsertionSortII ii = new InsertionSortII();
 //        System.out.println(Arrays.toString(ii.sort(Test.randomNumber(100000))));
-        InsertionSortIII sortIII = new InsertionSortIII();
-        sortIII.sort(Test.randomNumber(10));
-        //System.out.println(Arrays.toString());
+//        InsertionSortIII sortIII = new InsertionSortIII();
+//        sortIII.sort(Test.randomNumber(10));
+//        System.out.println(Arrays.toString());
 //        ShellSort shellSort = new ShellSort();
 //        System.out.println(Arrays.toString(shellSort.sort(Test.randomNumber(10))));
+        QuickSort sort = new QuickSort();
+        System.err.println(Arrays.toString(sort.sort(Test.randomNumber(10))));
     }
 
     public static int[] randomNumber(int n){
@@ -33,7 +35,7 @@ public class Test {
         Random random = new Random();
         for(int i = 0; i < n; ++i){
             int t = random.nextInt(n);
-            //System.out.print(t + " ");
+            System.out.print(t + " ");
             test[i] = t;
         }
         System.out.println();
